@@ -1,0 +1,27 @@
+def mostrar_nombres_y_alturas(lista_personajes):
+    for personaje in lista_personajes:
+        print(f"{personaje['nombre']} {personaje['altura']:2d}")
+        
+def mostrar_todos_los_datos(lista_personajes):
+    for personaje in lista_personajes:
+        print(f"Nombre: {personaje['nombre']}")
+        print(f"Altura: {personaje['altura']}")
+        # Agrega más líneas aquí para imprimir otros datos del personaje si es necesario
+        print("-----")
+
+# Aquí se muestra un ejemplo de cómo usar las dos funciones de arriba
+lista_personajes = [
+    {"nombre": "Mario", "altura": 170, "edad": 30, "color de cabello": "marrón"},
+    {"nombre": "Luigi", "altura": 175, "edad": 32, "color de cabello": "verde"},
+    {"nombre": "Peach", "altura": 165, "edad": 25, "color de cabello": "rubio"},
+    {"nombre": "Toad", "altura": 110, "edad": 18, "color de cabello": "blanco"}
+]
+
+opcion = input("Ingrese '1' para mostrar solo nombres y alturas, '2' para mostrar todos los datos: ")
+
+if opcion == "1":
+    mostrar_nombres_y_alturas(lista_personajes)
+elif opcion == "2":
+    mostrar_todos_los_datos(lista_personajes)
+else:
+    print("Opción inválida.")
